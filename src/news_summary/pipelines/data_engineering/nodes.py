@@ -6,7 +6,7 @@ generated using Kedro 0.19.5
 # ==== IMPORTS ====
 # =================
 
-from newsdataapi import NewsDataAPIClient
+from newsdataapi import NewsDataApiClient
 
 # ===================
 # ==== FUNCTIONS ====
@@ -31,4 +31,4 @@ def request_data(api_key: str, max_result: int=10):
         language="en",
         max_result=max_result,
     )
-    return response
+    return response['results']
